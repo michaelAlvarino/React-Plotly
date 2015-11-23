@@ -6,6 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/michaelAlvarino/React-Plotly.git"
+  },
+  "keywords": [
+    "react",
+    "plotly",
+    "graphing"
+  ],
   "author": "Weltart An, Migey Alavarano",
   "license": "MIT"
 }
