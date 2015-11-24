@@ -1,21 +1,19 @@
-const gulp = require('gulp');
-const sourcemaps = require('gulp-sourcemaps');
-const babel = require('gulp-babel');
-const concat = require('gulp-concat');
+var fs = require("fs");
+var browserify = require("browserify");
+var gulp = require("gulp");
+var reactify = require("reactify");
 
-gulp.task('js', () => {
-    return gulp.src('src/**/*.js')
-        .pipe(sourcemaps.init())
-        .pipe(babel({
-            "presets": ["react"]
-        }))
-        .pipe(concat('react-plotly.js'))
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('dist'));
+gulp.task('js', () =>{
+	browserify({ debug: true })
+	  .transform(reactify)
+	  .require("./index.js", { entry: true })
+	  .bundle()
+	  .on("error", function (err) { console.log("Error: " + err.message); })
+	  .pipe(fs.createWriteStream("./dist/bundle.js"));
 });
 
-gulp.task('watch', () => {
-	gulp.watch('src/**/*.js', ['js']);
-})
+gulp.task('watch',() => {
+	gulp.watch('./src/**/*.js',['js']);
+});
 
-gulp.task('default', ['js','watch'])
+gulp.task("default", ['js', 'watch']);
