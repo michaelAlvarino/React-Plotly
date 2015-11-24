@@ -9,7 +9,7 @@ gulp.task('js', () => {
         .pipe(babel({
             "presets": ["react"]
         }))
-        .pipe(concat('bundle.js'))
+        .pipe(concat('react-plotly.js'))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('dist'));
 });

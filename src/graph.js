@@ -26,4 +26,3 @@ var Graph = React.createClass({
 });
 
 module.exports = Graph;
-  
