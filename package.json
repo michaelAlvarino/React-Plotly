@@ -16,5 +16,12 @@
     "graphing"
   ],
   "author": "Weltart An, Migey Alavarano",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "babel-preset-react": "^6.1.18",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^6.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-sourcemaps": "^1.6.0"
+  }
 }

@@ -1,4 +1,4 @@
-const React = require("react")
+const React = require("../node_modules/react")
 
 var Graph = React.createClass({
   propTypes: {
@@ -20,9 +20,10 @@ var Graph = React.createClass({
   },
   render: function () {
     return (
-      <div id={this.props.containerId} />
+      <div id={this.props.containerId} >test</div>      
     );
   }
 });
 
 module.exports = Graph;
+  
