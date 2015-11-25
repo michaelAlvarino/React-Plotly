@@ -22,6 +22,7 @@ gulp.task("js", function(callback) {
 				}
 			]
 		},
+		// got this from react-draggable... trying to learn from a library i like
 		externals:{
 			react:{
 				'commonjs': 'react',
