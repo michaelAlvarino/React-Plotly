@@ -1,7 +1,4 @@
-// const React = require('react');
-// import React from "react";
-
-var Graph = React.createClass({
+var Surface = React.createClass({
   propTypes: {
     containerId: React.PropTypes.string.isRequired,
     data: React.PropTypes.array.isRequired,
@@ -26,4 +23,4 @@ var Graph = React.createClass({
   }
 });
 
-module.exports = Graph;
+module.exports = Surface;
