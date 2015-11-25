@@ -1,8 +1,8 @@
-var Scatter = React.createClass({
+var Plot = React.createClass({
   propTypes: {
     containerId: React.PropTypes.string.isRequired,
     data: React.PropTypes.array.isRequired,
-    layout: React.PropTypes.object.isRequired
+    layout: React.PropTypes.object
   },
   componentDidMount: function () {
     this.plot(this.props);
@@ -23,4 +23,4 @@ var Scatter = React.createClass({
   }
 });
 
-module.exports = Scatter;
+module.exports = Plot;
