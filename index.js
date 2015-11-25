@@ -1,4 +1,4 @@
 module.exports = {
-  Graph: require("./src/surface"),
-  Scatter: require("./src/scatter")
+  Graph: require("./src/surface.js"),
+  Scatter: require("./src/scatter.js")
 }

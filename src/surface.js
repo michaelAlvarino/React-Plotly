@@ -1,4 +1,5 @@
-const React = require('react')
+// const React = require('react');
+// import React from "react";
 
 var Graph = React.createClass({
   propTypes: {

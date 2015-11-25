@@ -1,19 +1,48 @@
-var fs = require("fs");
-var browserify = require("browserify");
 var gulp = require("gulp");
-var reactify = require("reactify");
+var gutil = require("gulp-util");
+var webpack = require("webpack");
 
-gulp.task('js', () =>{
-	browserify({ debug: true })
-	  .transform(reactify)
-	  .require("./index.js", { entry: true })
-	  .bundle()
-	  .on("error", function (err) { console.log("Error: " + err.message); })
-	  .pipe(fs.createWriteStream("./dist/react-plotly.js"));
+gulp.task("js", function(callback) {
+    // run webpack
+    webpack({
+        entry:"./index.js",
+        output:{
+        	path: "dist",
+        	filename: "react-plotly.js"
+        },
+        module: {
+			loaders: [
+				{
+					test: /\.jsx?$/,
+					exclude: /(node_modules|bower_components)/,
+					loader: "babel-loader",
+					query: {
+						presets: ['react', 'es2015']
+					}
+				}
+			]
+		},
+		externals:{
+			react:{
+				'commonjs': 'react',
+				'commonjs2': 'react',
+				'amd': 'react',
+				// React dep should be available as window.React, not window.react
+				'root': 'React'
+			}
+		}
+    }, 
+	function(err, stats) {
+	    if(err) throw new gutil.PluginError("webpack", err);
+	    gutil.log("[webpack]", stats.toString({
+	        // output options
+	    }));
+	    callback();
+	})
 });
 
-gulp.task('watch',() => {
-	gulp.watch('./src/**/*.js',['js']);
-});
+gulp.task("watch", ()=>{
+	gulp.watch('./src/**/*.js', ['js']);
+})
 
-gulp.task("default", ['js', 'watch']);
+gulp.task("default",["js","watch"])
