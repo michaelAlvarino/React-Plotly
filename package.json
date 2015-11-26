@@ -1,6 +1,6 @@
 {
   "name": "react-plotly",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "React components for the Plotly graphing library",
   "main": "dist/react-plotly.js",
   "browser": "dist/react-plotly.js",
