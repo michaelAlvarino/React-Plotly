@@ -1,6 +1,6 @@
 {
   "name": "react-plotly",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React components for the Plotly graphing library",
   "main": "dist/react-plotly.js",
   "browser": "dist/react-plotly.js",
@@ -19,7 +19,7 @@
   "author": "Weltart An, Migey Alavarano",
   "license": "MIT",
   "bugs": {
-    "url":"https://github.com/michaelAlvarino/React-Plotly/issues"
+    "url": "https://github.com/michaelAlvarino/React-Plotly/issues"
   },
   "devDependencies": {
     "babel-core": "^6.2.1",
