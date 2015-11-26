@@ -46,15 +46,15 @@
 
 	"use strict";
 
-	module.exports = {
-	  Graph: __webpack_require__(1)
-	};
+	module.exports = __webpack_require__(1);
 
 /***/ },
 /* 1 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
+
+	var React = __webpack_require__(2);
 
 	var Plot = React.createClass({
 	  displayName: "Plot",
@@ -77,15 +77,17 @@
 	    Plotly.plot(containerId, data, layout);
 	  },
 	  render: function render() {
-	    return React.createElement(
-	      "div",
-	      { id: this.props.containerId },
-	      "test"
-	    );
+	    return React.createElement("div", { id: this.props.containerId });
 	  }
 	});
 
 	module.exports = Plot;
+
+/***/ },
+/* 2 */
+/***/ function(module, exports) {
+
+	module.exports = undefined;
 
 /***/ }
 /******/ ]);

@@ -1,5 +1,7 @@
+var React = require("react");
+
 var Plot = React.createClass({
-  propTypes: {
+  propTypes: { 
     containerId: React.PropTypes.string.isRequired,
     data: React.PropTypes.array.isRequired,
     layout: React.PropTypes.object
@@ -18,7 +20,7 @@ var Plot = React.createClass({
   },
   render: function () {
     return (
-      <div id={this.props.containerId} >test</div>      
+      <div id={this.props.containerId}></div>      
     );
   }
 });
