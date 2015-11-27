@@ -21,17 +21,7 @@ gulp.task("js", function(callback) {
 					}
 				}
 			]
-		},
-		// got this from react-draggable... trying to learn from a library i like
-		// externals:{
-		// 	react:{
-		// 		'commonjs': 'react',
-		// 		'commonjs2': 'react',
-		// 		'amd': 'react',
-		// 		// React dep should be available as window.React, not window.react
-		// 		'root': 'React'
-		// 	}
-		// }
+		}
     }, 
 	function(err, stats) {
 	    if(err) throw new gutil.PluginError("webpack", err);

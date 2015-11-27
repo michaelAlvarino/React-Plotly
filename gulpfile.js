@@ -8,7 +8,9 @@ gulp.task("js", function(callback) {
         entry:"./index.js",
         output:{
         	path: "dist",
-        	filename: "react-plotly.js"
+        	filename: "react-plotly.js",
+        	library: "ReactPlotly",
+        	libraryTarge: "umd"
         },
         module: {
 			loaders: [

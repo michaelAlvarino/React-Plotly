@@ -1,28 +1,28 @@
-var React = require("react");
+import React, {Component, PropTypes} from 'react';
 
-var Plot = React.createClass({
-  propTypes: { 
-    containerId: React.PropTypes.string.isRequired,
-    data: React.PropTypes.array.isRequired,
-    layout: React.PropTypes.object
-  },
-  componentDidMount: function () {
-    this.plot(this.props);
-  },
-  componentWillReceiveProps: function (nextProps) {
-    this.plot(nextProps);
-  },
-  plot: function (props) {
-    var containerId = props.containerId,
-        data = props.data,
-        layout = props.layout;
-    Plotly.plot(containerId, data, layout);
-  },
-  render: function () {
-    return (
-      <div id={this.props.containerId}></div>      
+export default class Plot extends Component{
+  constructor(props) {
+    super(props);
+    this.state = {Data: props.Data,
+                  Layout: props.Layout,
+                  containerId: props.containerId};
+  }
+  componentDidMount(){
+    var layout = props.layout;
+    var data = props.data;
+    var containerId = props.containerId
+    Plotly.newPlot(containerId, this.state.Data, layout);
+  }
+  render(){
+    return(
+      <div>
+        <div id={containerId}></div>
+      </div>
     );
   }
-});
-
-module.exports = Plot;
+}
+Plot.propTypes={
+  Data: React.PropTypes.array,
+  Layout: React.PropTypes.object,
+  containerId: React.PropTypes.string
+}
