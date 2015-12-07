@@ -1,1 +1,1 @@
-module.exports = require("./src/plot.js");
+module.exports = require("./src/react-plotly.js");

@@ -1,5 +1,7 @@
 var gulp = require("gulp");
 var react = require("gulp-react");
+var webpack = require("webpack");
+var gutil = require("gulp-util");
 
 gulp.task("js", function(callback) {
    gulp.src('./src/react-plotly.js')
