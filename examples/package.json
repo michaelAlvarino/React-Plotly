@@ -1,6 +1,7 @@
 {
   "name": "examples",
   "version": "1.0.0",
+<<<<<<< HEAD
   "description": "",
   "main": "demo.js",
   "scripts": {
@@ -8,4 +9,23 @@
   },
   "author": "",
   "license": "ISC"
+=======
+  "description": "react-plotly demos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "plotly",
+    "examples"
+  ],
+  "author": "waleter and miguel",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-plotly": "^0.1.1"
+  }
+>>>>>>> 6b6ae40d3d84241c976bee1b2470c2d92b223ba0
 }
