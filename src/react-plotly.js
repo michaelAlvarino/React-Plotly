@@ -1,6 +1,8 @@
+var React = require('react');
+
 var Plot = React.createClass({
   propTypes: {
-    containerId: React.PropTypes.string.isRequired,
+    handle: React.PropTypes.string.isRequired,
     data: React.PropTypes.array.isRequired,
     layout: React.PropTypes.object
   },
@@ -11,16 +13,17 @@ var Plot = React.createClass({
     this.plot(nextProps);
   },
   plot: function (props) {
-    var containerId = props.containerId,
+    var handle = props.handle,
         data = props.data,
         layout = props.layout;
-    Plotly.plot(containerId, data, layout);
+    Plotly.plot(handle, data, layout);
   },
   render: function () {
     return (
-      <div id={this.props.containerId} >test</div>      
+      <div id={this.props.handle} >test</div>      
     );
   }
 });
+
 
 module.exports = Plot;
