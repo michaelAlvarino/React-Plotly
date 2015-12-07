@@ -14,7 +14,8 @@
   "keywords": [
     "react",
     "plotly",
-    "graphing"
+    "graphing",
+    "react-component"
   ],
   "author": "Weltart An, Migey Alavarano",
   "license": "MIT",
