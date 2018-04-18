@@ -1,3 +1,5 @@
+# Deprecated in favor of [react-plotly](https://plot.ly/products/react/)
+
 # React Plotly
 
 ## Build
